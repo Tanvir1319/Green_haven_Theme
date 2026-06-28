@@ -1,0 +1,564 @@
+/*
+=========================================
+MAIN STYLES
+Green Haven Website
+=========================================
+*/
+
+/* ========== GLOBAL SETUP ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #6CB33F;
+    --dark-green-overlay: rgba(47, 93, 58, 0.7);
+    --text-dark: #1F2933;
+    --text-muted: #6B7280;
+    --border-light: #E5E7EB;
+    --background-light: #F9FAFB;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+/* Container System */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Typography */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+small {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    height: 40px;
+    padding: 0 20px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary-custom:hover {
+    background-color: #5a9e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 179, 63, 0.3);
+}
+
+/* ========== HERO SECTION - OWL CAROUSEL ========== */
+
+.hero-section {
+    padding: 40px 0 80px 0;
+    background-color: var(--white);
+    position: relative;
+}
+
+.hero-carousel {
+    position: relative;
+}
+
+.hero-slide {
+    width: 100%;
+}
+
+.hero-cards-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.hero-card {
+    width: 360px;
+    height: 280px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: scale(1.02);
+}
+
+.hero-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--dark-green-overlay) 0%, transparent 100%);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.hero-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.hero-card-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* Hide Owl Carousel Navigation Arrows */
+.hero-carousel .owl-nav {
+    display: none !important;
+}
+
+/* Owl Carousel Dots - Clean Single Style */
+.hero-carousel .owl-dots {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.hero-carousel .owl-dots button.owl-dot {
+    width: 32px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #E5E7EB !important;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.hero-carousel .owl-dots button.owl-dot.active {
+    background-color: var(--primary-green) !important;
+}
+
+.hero-carousel .owl-dots button.owl-dot:hover {
+    background-color: #d1d5db !important;
+}
+
+.hero-carousel .owl-dots button.owl-dot span {
+    display: none;
+}
+
+/* ========== ABOUT SECTION ========== */
+
+.about-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 520px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-green);
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* ========== SERVICES SECTION ========== */
+
+.services-section {
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.services-row {
+    justify-content: center;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    color: var(--primary-green);
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.service-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 12px;
+    margin-left: 0%;
+}
+
+/* ========== WHY CHOOSE US SECTION ========== */
+
+.why-choose-section {
+    padding: 60px 0;
+    background-color: var(--background-light);
+}
+
+.why-choose-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    color: var(--primary-green);
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ========== PROJECTS SECTION ========== */
+
+.projects-section {
+    padding: 2px 0;
+    background-color: var(--white);
+}
+
+.project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-content {
+    padding: 16px;
+}
+
+.project-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 15px 18px;
+    background-color: var(--primary-green);
+    color: white;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+   text-align: center;
+    line-height: 1.2;  
+   
+}
+
+/* ========== CTA SECTION ========== */
+
+.cta-section {
+    height: 180px;
+    background-image: url('../images/cta-background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.btn-cta {
+    height: 44px;
+    padding: 0 28px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cta:hover {
+    background-color: #5a9e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 179, 63, 0.4);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .main-container {
+        max-width: 960px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .hero-cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: calc(50% - 12px);
+        min-width: 320px;
+    }
+
+    .hero-card:nth-child(3) {
+        display: none;
+    }
+
+    .projects-section .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 20px 0 60px 0;
+    }
+
+    .hero-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-card {
+        width: 100%;
+        min-width: unset;
+        height: 360px;
+    }
+
+    .hero-card:nth-child(2),
+    .hero-card:nth-child(3) {
+        display: none;
+    }
+
+    /* Sections */
+    .about-section {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .about-image {
+        margin-bottom: 32px;
+        height: 280px;
+    }
+
+    .services-section {
+        padding: 48px 0;
+    }
+
+    .why-choose-section {
+        padding: 48px 0;
+    }
+
+    .projects-section {
+        padding: 48px 0;
+    }
+
+    .projects-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Typography */
+    .section-heading {
+        font-size: 22px;
+    }
+
+    .hero-card-title {
+        font-size: 20px;
+    }
+
+    .cta-title {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    /* Buttons */
+    .btn-primary-custom,
+    .btn-cta {
+        width: 100%;
+        height: 44px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .hero-card-title {
+        font-size: 18px;
+    }
+
+    .hero-card-text {
+        font-size: 13px;
+    }
+
+    .section-heading {
+        font-size: 20px;
+    }
+
+    .cta-title {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,405 @@
+/**
+ * =========================================
+ * PORTFOLIO PAGE STYLES
+ * Green Haven Website
+ * 
+ * @package    Green_Haven
+ * @subpackage Portfolio
+ * @version    1.0.0
+ * =========================================
+ */
+
+/**
+ * Table of Contents:
+ * 
+ * 1.0 - Global Setup
+ * 2.0 - Container System
+ * 3.0 - Page Title Section
+ * 4.0 - Filter Buttons Section
+ * 5.0 - Portfolio Grid Section
+ * 6.0 - Portfolio Card
+ * 7.0 - MixItUp Animation
+ * 8.0 - CTA Section
+ * 9.0 - Responsive Design
+ * 10.0 - Accessibility
+ * 11.0 - Print Styles
+ */
+
+/* ==========================================================================
+   1.0 - GLOBAL SETUP
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #6CB33F;
+    --dark-green-overlay: rgba(47, 93, 58, 0.7);
+    --text-dark: #1F2933;
+    --text-muted: #6B7280;
+    --border-light: #E5E7EB;
+    --background-light: #F9FAFB;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+/* ==========================================================================
+   2.0 - CONTAINER SYSTEM
+   ========================================================================== */
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* ==========================================================================
+   3.0 - PAGE TITLE SECTION
+   ========================================================================== */
+
+.page-title-section {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    background-color: var(--background-light);
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin: 0;
+}
+
+/* ==========================================================================
+   4.0 - FILTER BUTTONS SECTION
+   ========================================================================== */
+
+.filter-section {
+    margin-bottom: 48px;
+    background-color: var(--background-light);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    height: 36px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--border-light);
+    color: var(--text-dark);
+}
+
+.filter-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* Active filter button */
+.filter-btn.active {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.filter-btn.active:hover {
+    background-color: #5a9e34;
+}
+
+/* ==========================================================================
+   5.0 - PORTFOLIO GRID SECTION
+   ========================================================================== */
+
+.portfolio-section {
+    padding-bottom: 80px;
+    background-color: var(--background-light);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ==========================================================================
+   6.0 - PORTFOLIO CARD
+   ========================================================================== */
+
+.portfolio-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    /* Only transition hover effects, NOT opacity or visibility */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portfolio-content {
+    padding: 16px;
+}
+
+.portfolio-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ==========================================================================
+   7.0 - MIXITUP ANIMATION STATES
+   ========================================================================== */
+
+/* 
+ * NO CSS transitions for opacity or display needed here
+ * MixItUp handles all filtering animations via JavaScript
+ * This prevents double animation conflicts
+ */
+
+/* ==========================================================================
+   8.0 - CTA SECTION
+   ========================================================================== */
+
+.cta-section {
+    height: 180px;
+    background-image: url('../images/cta-background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark-green-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.btn-cta {
+    height: 44px;
+    padding: 0 28px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cta:hover {
+    background-color: #5a9e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 179, 63, 0.4);
+}
+
+/* ==========================================================================
+   9.0 - RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .main-container {
+        max-width: 960px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    /* Portfolio grid → 2 columns */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA heading smaller */
+    .cta-title {
+        font-size: 24px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Page title */
+    .page-title {
+        font-size: 22px;
+    }
+
+    .page-title-section {
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+
+    /* Filter buttons */
+    .filter-section {
+        margin-bottom: 32px;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-btn {
+        width: 100%;
+        min-width: 100%;
+        height: 40px;
+    }
+
+    /* Portfolio grid → 1 column */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Portfolio image height */
+    .portfolio-image {
+        height: 200px;
+    }
+
+    /* Portfolio section */
+    .portfolio-section {
+        padding-bottom: 48px;
+    }
+
+    /* CTA section */
+    .cta-section {
+        height: 160px;
+    }
+
+    .cta-title {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    .btn-cta {
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
+/* Extra Small Devices (≤480px) */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    .cta-title {
+        font-size: 20px;
+    }
+
+    .portfolio-image {
+        height: 180px;
+    }
+}
+
+/* ==========================================================================
+   10.0 - ACCESSIBILITY
+   ========================================================================== */
+
+.filter-btn:focus,
+.btn-cta:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================================================
+   11.0 - PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    .navbar,
+    .filter-section,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+
+    .portfolio-card {
+        page-break-inside: avoid;
+    }
+}

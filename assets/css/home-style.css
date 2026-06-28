@@ -1,0 +1,558 @@
+/* ========================================
+   MAIN STYLES - GREEN HAVEN
+   Homepage Layout & Components
+   ======================================== */
+
+/* ========================================
+   GLOBAL STYLES & RESET
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #F5F6F7;
+    color: #111827;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-heading {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #111827;
+    margin-bottom: 14px;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:focus {
+    outline: 2px solid #66B245;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero-section {
+    margin-top: 18px;
+    margin-bottom: 24px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.hero-tile {
+    position: relative;
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.hero-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+}
+
+.hero-title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    margin-bottom: 6px;
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+}
+
+.hero-btn {
+    height: 34px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #66B245;
+    color: #FFFFFF;
+}
+
+.hero-btn:hover {
+    background: #5AA03A;
+    color: #FFFFFF;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #D1D5DB;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dot.active {
+    background: #66B245;
+    border-color: #66B245;
+}
+
+/* ========================================
+   MIDDLE SECTION - TWO COLUMN LAYOUT
+   ======================================== */
+.middle-section {
+    margin-top: 18px;
+    margin-bottom: 26px;
+}
+
+.middle-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 24px;
+}
+
+/* ========================================
+   LEFT COLUMN - ABOUT US
+   ======================================== */
+.about-section {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    height: 240px;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========================================
+   WHY CHOOSE US SECTION
+   ======================================== */
+.why-choose-section {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 18px;
+}
+
+.features-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #66B245;
+    font-size: 28px;
+}
+
+.feature-title {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #111827;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.feature-text {
+    font-size: 11px;
+    color: #6B7280;
+    line-height: 16px;
+}
+
+/* ========================================
+   RIGHT COLUMN - COMPLETE GARDEN SOLUTIONS
+   ======================================== */
+.solutions-section {
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #66B245;
+    font-size: 32px;
+}
+
+.service-title {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #111827;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.service-text {
+    font-size: 10px;
+    color: #6B7280;
+    line-height: 16px;
+}
+
+/* ========================================
+   LATEST TRANSFORMATIONS
+   ======================================== */
+.transformations-section {
+    margin-top: 18px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.project-image {
+    height: 150px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-body {
+    padding: 12px;
+}
+
+.project-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.project-tag {
+    display: inline-block;
+    height: -13px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #66B245;
+    color: #FFFFFF;
+}
+
+/* ========================================
+   CTA BANNER SECTION
+   ======================================== */
+.cta-banner {
+    width: 100%;
+    height: 190px;
+    background-image: url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 48, 40, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 34px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn {
+    height: 44px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #66B245;
+    color: #FFFFFF;
+}
+
+.cta-btn:hover {
+    background: #5AA03A;
+    color: #FFFFFF;
+}
+
+.cta-btn i {
+    font-size: 12px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
+@media (max-width: 1024px) {
+    .container-custom {
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-tile {
+        height: 200px;
+    }
+
+    /* Middle Section */
+    .middle-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA Banner */
+    .cta-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
+@media (max-width: 767px) {
+    .container-custom {
+        padding: 0 16px;
+    }
+
+    .section-heading {
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        margin-top: 12px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .hero-tile {
+        height: 180px;
+    }
+
+    .hero-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        display: none;
+    }
+
+    /* Middle Section */
+    .middle-section {
+        margin-top: 16px;
+    }
+
+    .middle-grid {
+        gap: 24px;
+    }
+
+    /* About Section */
+    .about-image {
+        height: 200px;
+    }
+
+    /* Why Choose Us */
+    .features-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-icon {
+        font-size: 28px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+        height: 160px;
+    }
+
+    .cta-title {
+        font-size: 18px;
+        line-height: 26px;
+        padding: 0 16px;
+    }
+
+    .cta-btn {
+        font-size: 12px;
+        padding: 10px 18px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - EXTRA SMALL
+   ======================================== */
+@media (max-width: 480px) {
+    .hero-tile {
+        height: 160px;
+    }
+
+    .hero-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .hero-btn {
+        font-size: 11px;
+        padding: 6px 12px;
+        height: 30px;
+    }
+
+    .about-image {
+        height: 180px;
+    }
+
+    .cta-banner {
+        height: 140px;
+    }
+
+    .cta-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

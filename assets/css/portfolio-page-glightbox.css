@@ -1,0 +1,142 @@
+/**
+ * =========================================
+ * GLIGHTBOX CUSTOM THEME
+ * Green Haven Website
+ * 
+ * @package    Green_Haven
+ * @subpackage Portfolio
+ * @version    1.0.0
+ * 
+ * Customizes GLightbox to match Green Haven theme colors
+ * =========================================
+ */
+
+/* ==========================================================================
+   GLIGHTBOX THEME COLOR OVERRIDES
+   ========================================================================== */
+
+/* Lightbox container background - Dark green overlay */
+.glightbox-container {
+    background-color: rgba(31, 41, 51, 0.95) !important;
+}
+
+/* Close button - Green Haven theme */
+.gclose,
+.gnext,
+.gprev {
+    color: #FFFFFF !important;
+    background-color: rgba(108, 179, 63, 0.9) !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover {
+    background-color: #6CB33F !important;
+    transform: scale(1.1) !important;
+}
+
+/* Navigation arrows - Green theme */
+.gslide-description {
+    background: linear-gradient(to top, rgba(31, 41, 51, 0.95), transparent) !important;
+}
+
+/* Title styling - Green Haven colors */
+.gslide-title {
+    color: #6CB33F !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+/* Description text */
+.gslide-desc {
+    color: #E5E7EB !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+/* Counter styling */
+.gloader {
+    border: 3px solid #6CB33F !important;
+    border-right-color: transparent !important;
+}
+
+/* Slide counter */
+.gslide-inline .gslide-description {
+    padding: 20px !important;
+}
+
+/* Zoom icon - Green theme */
+.gbtn.focused {
+    outline: 2px solid #6CB33F !important;
+    outline-offset: 2px !important;
+}
+
+/* ==========================================================================
+   PORTFOLIO CARD LINK STYLING
+   ========================================================================== */
+
+/* Remove default link styling */
+.portfolio-card a.glightbox {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.portfolio-card a.glightbox:hover {
+    text-decoration: none;
+}
+
+/* Add subtle overlay on hover to indicate clickable */
+.portfolio-card a.glightbox .portfolio-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(108, 179, 63, 0);
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+}
+
+.portfolio-card a.glightbox:hover .portfolio-image::after {
+    background-color: rgba(108, 179, 63, 0.1);
+}
+
+/* Position relative for pseudo-element */
+.portfolio-card a.glightbox .portfolio-image {
+    position: relative;
+}
+
+/* Optional: Add zoom icon indicator on hover */
+.portfolio-card a.glightbox .portfolio-image::before {
+    content: '\f00e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #FFFFFF;
+    font-size: 32px;
+    background-color: rgba(108, 179, 63, 0.9);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    line-height: 60px;
+    text-align: center;
+}
+
+.portfolio-card a.glightbox:hover .portfolio-image::before {
+    transform: translate(-50%, -50%) scale(1);
+}
