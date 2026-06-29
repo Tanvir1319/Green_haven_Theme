@@ -1,0 +1,452 @@
+/*
+=========================================
+CONTACT PAGE STYLES
+Green Haven Website
+=========================================
+*/
+
+/* ========== GLOBAL SETUP ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #6CB33F;
+    --dark-green-overlay: rgba(47, 93, 58, 0.7);
+    --text-dark: #1F2933;
+    --text-muted: #6B7280;
+    --border-light: #E5E7EB;
+    --background-light: #F9FAFB;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+/* ========== CONTAINER SYSTEM ========== */
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* ========== HERO SECTION ========== */
+
+/*
+ * Contact hero section.
+ * Use unique class names so it does not conflict with service hero styles.
+ */
+.green-haven-contact-hero {
+	position: relative;
+	min-height: 320px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+/*
+ * Show overlay only when a background image exists.
+ */
+.green-haven-contact-hero__overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--dark-green-overlay, rgba(23, 53, 31, 0.72));
+	z-index: 1;
+}
+
+.green-haven-contact-hero--has-image .green-haven-contact-hero__overlay {
+	display: block;
+}
+
+/*
+ * Keep content above overlay.
+ */
+.green-haven-contact-hero .main-container {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+}
+
+.green-haven-contact-hero__content {
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.green-haven-contact-hero__title {
+	font-size: 32px;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 1.25;
+	margin-bottom: 12px;
+}
+
+.green-haven-contact-hero__subtitle {
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.9);
+	line-height: 1.6;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* ========== MAIN CONTACT SECTION ========== */
+
+.contact-main-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--white);
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+/* ========== CONTACT FORM (LEFT) ========== */
+
+.contact-form-container {
+    background-color: var(--white);
+}
+
+.contact-form .form-group {
+    margin-bottom: 16px;
+}
+
+.contact-form .form-control {
+    height: 44px;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 0 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 179, 63, 0.1);
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.contact-form textarea.form-control {
+    height: 120px;
+    padding: 12px 14px;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-helper-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.btn-submit {
+    height: 44px;
+    padding: 0 28px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background-color: #5a9e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 179, 63, 0.4);
+}
+
+/* ========== COMPANY INFORMATION (RIGHT) ========== */
+
+.company-info-container {
+    background-color: var(--white);
+}
+
+.info-block {
+    margin-bottom: 16px;
+}
+
+.info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.business-hours p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ========== MAP ========== */
+
+.map-container {
+    margin-top: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ========== CTA SECTION ========== */
+
+.cta-section {
+    height: 180px;
+    background-image: url('../images/cta-background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark-green-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.btn-cta {
+    height: 44px;
+    padding: 0 28px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cta:hover {
+    background-color: #5a9e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 179, 63, 0.4);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .main-container {
+        max-width: 960px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .contact-main-section .row {
+        gap: 32px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Hero section */
+    .hero-section {
+        height: 260px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    /* Contact section */
+    .contact-main-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    /* Form switches to full width */
+    .contact-form-container,
+    .company-info-container {
+        width: 100%;
+    }
+
+    /* Map */
+    .map-container iframe {
+        height: 180px;
+    }
+
+    /* CTA section */
+    .cta-section {
+        height: 160px;
+        padding: 40px 0;
+    }
+
+    .cta-title {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    .btn-cta,
+    .btn-submit,
+    .btn-hero {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices (≤480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 22px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .cta-title {
+        font-size: 20px;
+    }
+
+    .section-heading {
+        font-size: 18px;
+    }
+}
+
+/* ========== FORM VALIDATION STYLES ========== */
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 13px;
+    color: #dc3545;
+    margin-top: 4px;
+}
+
+.valid-feedback {
+    display: block;
+    font-size: 13px;
+    color: #28a745;
+    margin-top: 4px;
+}
+
+/* ========== ACCESSIBILITY ========== */
+
+.btn-submit:focus,
+.btn-cta:focus,
+.btn-hero:focus,
+.form-control:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== PRINT STYLES ========== */
+
+@media print {
+    .navbar,
+    .hero-section,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+
+    .contact-main-section {
+        padding: 20px 0;
+    }
+}

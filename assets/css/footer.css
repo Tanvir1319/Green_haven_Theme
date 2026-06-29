@@ -1,0 +1,470 @@
+/* ========================================
+   NAVBAR / HEADER STYLES
+   Green Haven Website
+   ======================================== */
+
+/* ========================================
+   HEADER CONTAINER
+   ======================================== */
+.navbar {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 0;
+    min-height: 72px;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========================================
+   LOGO SECTION
+   ======================================== */
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #66B245;
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2E7D32;
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   NAVIGATION LINKS
+   ======================================== */
+.navbar-nav {
+    gap: 28px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    padding: 0;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #66B245;
+}
+
+/* Active Link Underline */
+.navbar-nav .nav-link.active {
+    color: #66B245;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: #66B245;
+}
+
+/* ========================================
+   PHONE SECTION
+   ======================================== */
+.phone-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #66B245;
+}
+
+.phone-container i {
+    font-size: 18px;
+}
+
+/* ========================================
+   MOBILE TOGGLE BUTTON
+   ======================================== */
+.navbar-toggler {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: 2px solid #66B245;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23374151' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ========================================
+   ESTIMATE BUTTON
+   ======================================== */
+.estimate {  /* Added class selector to match your HTML */
+    height: 44px;
+    padding: 0 16px;
+    margin-left: 48px;
+    margin-right: 59px;
+    background-color: #66B245;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.estimate:hover {
+    background-color: #5a9e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 179, 63, 0.4);
+}
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+
+/* ========================================
+   FOOTER CONTAINER
+   ======================================== */
+.footer {
+    background: #F3F4F6;
+    padding: 40px 0 20px;
+    margin-top: 40px;  /* Adjusted from 0px to add space below main content */
+}
+
+/* ========================================
+   FOOTER LOGO & ABOUT SECTION
+   ======================================== */
+.footer-logo {
+    margin-bottom: 12px;
+}
+
+.footer-logo .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo .logo-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #66B245;
+    font-size: 24px;
+}
+
+.footer-logo .logo-text {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2E7D32;
+    letter-spacing: 0.3px;
+}
+
+.footer-description {
+    font-size: 12px;
+    line-height: 20px;
+    color: #6B7280;
+    margin: 0;
+    max-width: 280px;
+}
+
+/* ========================================
+   FOOTER HEADINGS
+   ======================================== */
+.footer-heading {
+    font-size: 13px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   FOOTER LINKS
+   ======================================== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: #374151;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #66B245;
+}
+
+/* ========================================
+   SOCIAL LINKS
+   ======================================== */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background: #66B245;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    background: #5AA03A;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
+/* ========================================
+   NEWSLETTER SECTION
+   ======================================== */
+.newsletter-form {
+    display: flex;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #FFFFFF;
+    max-width: 300px;
+}
+
+.newsletter-input {
+    height: 38px;
+    border: none;
+    padding: 10px 12px;
+    font-size: 12px;
+    flex: 1;
+    outline: none;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.newsletter-input::placeholder {
+    color: #9CA3AF;
+}
+
+.newsletter-button {
+    width: 44px;
+    height: 38px;
+    background: #66B245;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.newsletter-button:hover {
+    background: #5AA03A;
+}
+
+.newsletter-button i {
+    font-size: 14px;
+}
+
+/* ========================================
+   FOOTER BOTTOM
+   ======================================== */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E7EB;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #6B7280;
+    margin: 0;
+}
+
+/* ========================================
+   GLOBAL FIX FOR STICKY NAVBAR
+   ======================================== */
+body {
+    margin: 0;
+    padding-top: 72px;  /* Adds space to push content below the sticky navbar */
+}
+
+/* ========================================
+   RESPONSIVE BEHAVIOR
+   ======================================== */
+/* (Rest of your responsive CSS remains unchanged) */
+@media (max-width: 1023px) {
+    .main-container {
+        padding: 0 20px;
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .phone-container {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        min-height: 64px;
+    }
+
+    .main-container {
+        padding: 0 16px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+    }
+
+    /* Mobile Menu */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        border-bottom: 1px solid #E5E7EB;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        padding: 16px 0;
+        gap: 0;
+    }
+
+    .nav-item {
+        padding: 12px 24px;
+        border-bottom: 1px solid #F3F4F6;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-nav .nav-link.active::after {
+        display: none;
+    }
+
+    /* Show phone in mobile menu */
+    .phone-container {
+        display: flex;
+        padding: 16px 24px;
+        border-top: 1px solid #E5E7EB;
+        margin-top: 8px;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        padding: 24px 0;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        min-height: 56px;
+    }
+
+    .logo-text {
+        font-size: 15px;
+    }
+
+    .footer-logo .logo-text {
+        font-size: 16px;
+    }
+
+    .footer-logo .logo-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+    }
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
