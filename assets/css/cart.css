@@ -1,0 +1,400 @@
+:root {
+  --gh-primary: #65a30d;
+  --gh-light-green: #84cc16;
+  --gh-button: #65bd22;
+  --gh-dark-green: #073f32;
+  --gh-text: #101820;
+  --gh-muted: #6b7280;
+  --gh-border: #e5e7eb;
+  --gh-cream: #f5f1e8;
+  --gh-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--gh-text);
+  background: linear-gradient(180deg, #f7f5f0 0%, #ffffff 42%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gh-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.gh-cart-title-section {
+  background: var(--gh-cream);
+  padding: 30px 0;
+}
+
+.gh-cart-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--gh-text);
+}
+
+.gh-cart-section {
+  padding: 30px 0 56px;
+  background: transparent;
+}
+
+.gh-cart-layout {
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.gh-cart-table {
+  overflow: hidden;
+  border: 1px solid var(--gh-border);
+  border-radius: 8px;
+  background: var(--gh-white);
+}
+
+.gh-cart-header {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 100px 120px 110px 34px;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gh-border);
+  background: var(--gh-white);
+  color: #111111;
+}
+
+.gh-cart-header strong {
+  font-size: 21px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.gh-cart-header span {
+  display: block;
+  margin-top: 5px;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.gh-cart-row {
+  min-height: 112px;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 100px 120px 110px 34px;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--gh-border);
+}
+
+.gh-cart-row:last-child {
+  border-bottom: 0;
+}
+
+.gh-cart-product {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.gh-cart-product img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gh-cart-product h2 {
+  margin: 0 0 4px;
+  max-width: 250px;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #111111;
+}
+
+.gh-cart-product p,
+.gh-cart-product small {
+  display: block;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #111111;
+}
+
+.gh-cart-product small {
+  color: #9aae84;
+  font-size: 13px;
+}
+
+.gh-price,
+.gh-subtotal {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  color: #111111;
+}
+
+.gh-qty {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.gh-qty button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #cbd1c7;
+  border-radius: 4px;
+  background: #f4f4ea;
+  color: var(--gh-dark-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.gh-qty span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.gh-remove {
+  color: var(--gh-dark-green);
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+}
+
+.gh-remove:hover {
+  color: #ef4444;
+}
+
+.gh-cart-summary {
+  padding: 20px 18px;
+  border: 1px solid var(--gh-border);
+  border-radius: 8px;
+  background: var(--gh-white);
+}
+
+.gh-cart-summary h2 {
+  margin: 0 0 20px;
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #111111;
+}
+
+.gh-total-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #dddddd;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.gh-total-row strong {
+  font-weight: 800;
+}
+
+.gh-total-row span {
+  font-weight: 600;
+}
+
+.gh-total-final {
+  border-bottom: 0;
+  margin-bottom: 20px;
+}
+
+.gh-coupon-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.gh-coupon-form input {
+  min-width: 0;
+  width: 100%;
+  height: 38px;
+  border: 1px solid #dddddd;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.gh-coupon-form button {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  background: var(--gh-button);
+  color: var(--gh-white);
+  font-size: 14px;
+}
+
+.gh-summary-btn {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  background: var(--gh-button);
+  color: var(--gh-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.gh-summary-btn:last-child {
+  margin-bottom: 0;
+}
+
+.gh-summary-btn:hover {
+  background: var(--gh-primary);
+  color: var(--gh-white);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .gh-cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gh-cart-table-wrap {
+    overflow-x: auto;
+  }
+
+  .gh-cart-table {
+    min-width: 820px;
+  }
+
+  .gh-cart-summary {
+    max-width: 360px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .gh-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .gh-cart-title {
+    font-size: 24px;
+  }
+
+  .gh-cart-section {
+    padding-top: 24px;
+  }
+
+  .gh-cart-table {
+    min-width: 0;
+  }
+
+  .gh-cart-header {
+    display: none;
+  }
+
+  .gh-cart-row {
+    grid-template-columns: 72px 1fr;
+    gap: 12px;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .gh-cart-product {
+    grid-column: 1 / -1;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+  }
+
+  .gh-cart-product img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .gh-cart-product h2 {
+    font-size: 18px;
+  }
+
+  .gh-cart-product p {
+    font-size: 15px;
+  }
+
+  .gh-price,
+  .gh-qty,
+  .gh-subtotal,
+  .gh-remove {
+    grid-column: 2;
+  }
+
+  .gh-price,
+  .gh-subtotal {
+    font-size: 16px;
+  }
+
+  .gh-price::before {
+    content: "Price: ";
+    font-weight: 800;
+  }
+
+  .gh-subtotal::before {
+    content: "Subtotal: ";
+    font-weight: 800;
+  }
+
+  .gh-qty::before {
+    content: "Quantity: ";
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  .gh-qty button {
+    width: 28px;
+    height: 28px;
+    font-size: 17px;
+  }
+
+  .gh-remove {
+    justify-self: start;
+    font-size: 20px;
+  }
+
+  .gh-cart-summary {
+    max-width: none;
+    width: 100%;
+  }
+
+  .gh-summary-btn {
+    width: 100%;
+  }
+}

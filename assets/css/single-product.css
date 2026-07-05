@@ -1,0 +1,516 @@
+:root {
+  --gh-green: #5aa122;
+  --gh-green-dark: #2f7d20;
+  --gh-dark-green: #073f32;
+  --gh-text: #101820;
+  --gh-muted: #555f5b;
+  --gh-border: #e6e9e7;
+  --gh-white: #ffffff;
+  --gh-star: #f4a900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--gh-text);
+  background: var(--gh-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--gh-green-dark);
+  text-decoration: none;
+}
+
+.gh-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.gh-product-section {
+  padding: 18px 0 18px;
+}
+
+.gh-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gh-text);
+}
+
+.gh-breadcrumb a:first-child {
+  color: var(--gh-green-dark);
+}
+
+.gh-main-title {
+  margin: 0 0 22px;
+  font-size: 32px;
+  line-height: 1.18;
+  font-weight: 800;
+  color: #050505;
+}
+
+.gh-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.gh-main-image-wrap {
+  position: relative;
+}
+
+.gh-main-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gh-zoom-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gh-white);
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.gh-thumb-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.gh-thumb {
+  width: 106px;
+  height: 76px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.gh-thumb.active {
+  border-color: var(--gh-green);
+}
+
+.gh-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gh-product-info-card {
+  border: 1px solid var(--gh-border);
+  border-radius: 8px;
+  padding: 20px 22px;
+  background: var(--gh-white);
+}
+
+.gh-product-title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #050505;
+}
+
+.gh-product-title span {
+  font-weight: 500;
+  color: #666666;
+}
+
+.gh-product-price {
+  margin: 0 0 12px;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  color: #050505;
+}
+
+.gh-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #050505;
+}
+
+.gh-stars,
+.gh-review-stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--gh-star);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.gh-product-desc {
+  margin: 0 0 18px;
+  max-width: 96%;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #111111;
+}
+
+.gh-cart-form {
+  margin: 0 0 16px;
+}
+
+.gh-qty-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.gh-qty-box {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gh-qty-box button,
+.gh-qty-box input {
+  width: 36px;
+  height: 34px;
+  border: 1px solid #cfd4d1;
+  background: var(--gh-white);
+  color: #111111;
+  font-size: 15px;
+  text-align: center;
+}
+
+.gh-qty-box input {
+  width: 50px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.gh-add-cart-btn {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--gh-green);
+  color: var(--gh-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.gh-add-cart-btn:hover {
+  background: var(--gh-green-dark);
+}
+
+.gh-product-meta {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.gh-product-meta p {
+  margin: 0;
+}
+
+.gh-tabs {
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gh-tab-header {
+  display: grid;
+  grid-template-columns: 0.8fr 1.35fr 1fr;
+  border-bottom: 1px solid var(--gh-border);
+}
+
+.gh-tab-btn {
+  height: 40px;
+  border: 0;
+  border-right: 1px solid var(--gh-border);
+  background: #fbfbfb;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.gh-tab-btn:last-child {
+  border-right: 0;
+}
+
+.gh-tab-btn.active {
+  color: var(--gh-green-dark);
+  background: var(--gh-white);
+  border-bottom: 2px solid var(--gh-green);
+}
+
+.gh-tab-body {
+  display: grid;
+  grid-template-columns: 0.8fr 1.35fr 1fr;
+}
+
+.gh-tab-panel {
+  display: block;
+  min-height: 68px;
+  padding: 34px;
+  border-right: 1px solid var(--gh-border);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.gh-tab-panel:last-child {
+  border-right: 0;
+}
+
+.gh-review-stars {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.gh-tab-panel p {
+  margin: 0;
+}
+
+.gh-related-section {
+  margin-top: 24px;
+}
+
+.gh-related-title {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.gh-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.gh-related-card {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 12px;
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  padding: 10px;
+  background: var(--gh-white);
+}
+
+.gh-related-card img {
+  width: 86px;
+  height: 74px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gh-related-card h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.gh-related-card p {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.gh-related-card a {
+  min-width: 104px;
+  height: 22px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gh-green);
+  color: var(--gh-white);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .gh-container {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .gh-product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gh-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gh-main-image {
+    height: 430px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gh-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .gh-product-section {
+    padding-top: 16px;
+  }
+
+  .gh-breadcrumb {
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+
+  .gh-main-title {
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+
+  .gh-main-image {
+    height: 300px;
+  }
+
+  .gh-thumb-row {
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .gh-thumb {
+    width: 88px;
+    height: 66px;
+    flex: 0 0 auto;
+  }
+
+  .gh-product-info-card {
+    padding: 18px;
+  }
+
+  .gh-product-title {
+    font-size: 22px;
+  }
+
+  .gh-product-price {
+    font-size: 32px;
+  }
+
+  .gh-rating-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .gh-product-desc {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .gh-add-cart-btn {
+    font-size: 17px;
+  }
+
+  .gh-tab-header,
+  .gh-tab-body {
+    grid-template-columns: 1fr;
+  }
+
+  .gh-tab-btn,
+  .gh-tab-panel {
+    border-right: 0;
+    border-bottom: 1px solid var(--gh-border);
+  }
+
+  .gh-tab-panel:last-child {
+    border-bottom: 0;
+  }
+
+  .gh-related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Review Carousel */
+
+.gh-review-carousel{
+    width:100%;
+}
+
+.gh-review-item{
+    text-align:left;
+    padding-bottom:5px;
+    margin-right: 106%;
+}
+
+.gh-review-item p{
+    margin:10px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.gh-review-carousel .owl-stage{
+    display:flex;
+}
+
+.gh-review-carousel .owl-item{
+    display:flex;
+}
+
+.gh-review-carousel .owl-dots{
+    margin-top:10px;
+    text-align:left;
+}
+
+.gh-review-carousel .owl-dot span{
+    width:8px;
+    height:8px;
+    margin:4px;
+    background:#d5d5d5;
+    transition:.3s;
+}
+
+.gh-review-carousel .owl-dot.active span{
+    background:var(--gh-green);
+}
+
+.gh-review-carousel .owl-nav{
+    display:none;
+}

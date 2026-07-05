@@ -64,7 +64,11 @@ function green_haven_theme_enqueue_assets() {
     wp_enqueue_style( 'green-haven-home-style',        get_template_directory_uri() . '/assets/css/home-style.css',               array( 'green-haven-owl-carousel' ), $version, 'all' );
     wp_enqueue_style( 'green-haven-nav-footer',        get_template_directory_uri() . '/assets/css/navbar-footer.css',             array(), $version, 'all' );
     wp_enqueue_style( 'green-haven-contact',           get_template_directory_uri() . '/assets/css/contact.css',                   array(), $version, 'all' );
-   
+     wp_enqueue_style( 'green-haven-shop',           get_template_directory_uri() . '/assets/css/shop.css',                   array(), $version, 'all' );
+       wp_enqueue_style( 'green-haven-cart',           get_template_directory_uri() . '/assets/css/cart.css',                   array(), $version, 'all' );
+         wp_enqueue_style( 'green-haven-checkout',           get_template_directory_uri() . '/assets/css/checkout.css',                   array(), $version, 'all' );
+           wp_enqueue_style( 'green-haven-single-product',           get_template_directory_uri() . '/assets/css/single-product.css',                   array(), $version, 'all' );
+             wp_enqueue_style( 'green-haven-wishlist',           get_template_directory_uri() . '/assets/css/wishlist.css',                   array(), $version, 'all' );
    
   
     wp_enqueue_style( 'green-haven-service',           get_template_directory_uri() . '/assets/css/service.css',                   array(), $version, 'all' );
@@ -106,6 +110,7 @@ function green_haven_theme_enqueue_assets() {
 
     
     wp_enqueue_script( 'green-haven-navigation-js',       get_template_directory_uri() . '/assets/js/navigation.js',             array( 'jquery' ), $version, true );
+      wp_enqueue_script( 'green-haven-review-carousel-js',       get_template_directory_uri() . '/assets/js/review-carousel.js',             array( 'jquery' ), $version, true );
    
 }
 add_action( 'wp_enqueue_scripts', 'green_haven_theme_enqueue_assets' );
