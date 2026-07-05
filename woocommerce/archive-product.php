@@ -35,8 +35,8 @@ do_action( 'woocommerce_before_main_content' );
  *
  * @hooked woocommerce_product_taxonomy_archive_header - 10
  */
-do_action( 'woocommerce_shop_loop_header' );
-
+do_action( 'woocommerce_shop_loop_header' ); ?>
+ <h1 class="gh-shop-title">Our Shop</h1><?php
 if ( woocommerce_product_loop() ) {
 
 	/**
