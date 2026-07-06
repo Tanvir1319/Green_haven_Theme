@@ -50,6 +50,48 @@ a {
   color: var(--gh-text);
 }
 
+.gh-shop-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.gh-shop-result-box .woocommerce-result-count,
+.gh-shop-ordering .woocommerce-ordering {
+  margin: 0;
+}
+
+.gh-shop-result-box .woocommerce-result-count {
+  color: var(--gh-muted);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.gh-shop-ordering {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gh-shop-ordering .orderby {
+  min-width: 220px;
+  height: 44px;
+  padding: 0 42px 0 14px;
+  border: 1px solid var(--gh-border);
+  border-radius: 5px;
+  background-color: var(--gh-white);
+  color: var(--gh-text);
+  font-size: 14px;
+  line-height: 1.2;
+  outline: none;
+}
+
+.gh-shop-ordering .orderby:focus {
+  border-color: var(--gh-green);
+  box-shadow: 0 0 0 3px rgba(47, 125, 32, 0.12);
+}
+
 .gh-shop-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
@@ -318,6 +360,17 @@ a {
     margin-bottom: 20px;
   }
 
+  .gh-shop-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gh-shop-ordering,
+  .gh-shop-ordering .woocommerce-ordering,
+  .gh-shop-ordering .orderby {
+    width: 100%;
+  }
+
   .gh-product-grid {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -352,87 +405,3 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.gh-shop-head-row {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 22px;
-}
-
-.gh-shop-result-box {
-  display: flex;
-  align-items: center;
-}
-
-.gh-result-count {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.4;
-  color: var(--gh-muted);
-  font-weight: 400;
-}
-
-@media (max-width: 767px) {
-  .gh-shop-head-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-}
-
-
-
-/* Wrapper */
-.woocommerce-ordering {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0;
-}
-
-/* Select box */
-.woocommerce-ordering .orderby {
-  width: 220px;
-  height: 38px;
-  padding: 0 12px;
-  border: 1px solid var(--gh-border);
-  border-radius: 4px;
-  background: var(--gh-white);
-  color: var(--gh-text);
-  font-size: 14px;
-  font-weight: 400;
-  outline: none;
-  cursor: pointer;
-}
-
-/* Focus */
-.woocommerce-ordering .orderby:focus {
-  border-color: var(--gh-green);
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-
-  .woocommerce-ordering {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .woocommerce-ordering .orderby {
-    width: 100%;
-  }
-
-}
