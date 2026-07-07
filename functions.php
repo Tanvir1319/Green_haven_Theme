@@ -52,6 +52,10 @@ require_once get_template_directory() . '/inc/green-haven-theme-options.php';
 if ( class_exists( 'WooCommerce' ) ) { 
     require_once get_template_directory() . '/inc/functions-php-parts/woo-hooks/woo-removed-hooks.php'; 
     require_once get_template_directory() . '/inc/functions-php-parts/woo-hooks/woo-hooks.php'; 
+
+	require_once get_template_directory() . '/inc/functions-php-parts/woo-hooks/woo-shop-page-custom-functions.php'; 
+
+	
 }
 
 

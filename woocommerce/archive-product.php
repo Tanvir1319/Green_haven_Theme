@@ -18,25 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -44,7 +25,9 @@ get_header( 'shop' );
  * @hooked woocommerce_breadcrumb - 20
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
-do_action( 'woocommerce_before_main_content' );
+do_action('woocommerce_before_main_content' );
+
+
 ?>
 <header class="gh-shop-header">
 	<h1 class="gh-shop-title">Our Shop</h1>
@@ -66,13 +49,38 @@ do_action( 'woocommerce_before_main_content' );
  *
  * @hooked woocommerce_product_taxonomy_archive_header - 10
  */
-do_action( 'woocommerce_shop_loop_header' );
+do_action('woocommerce_shop_loop_header' );
 
 
 
 
 
 if ( woocommerce_product_loop() ) {
+
+
+?> 
+
+
+
+<div class="gh-shop-toolbar">
+	
+		<div class="gh-shop-result-box">
+			<?php woocommerce_result_count(); ?>
+		</div>
+
+		<div class="gh-shop-ordering">
+			<?php woocommerce_catalog_ordering(); ?>
+		</div>
+
+
+
+		
+	</div>
+
+	
+<?php
+
+
 
 	/**
 	 * Hook: woocommerce_before_shop_loop.
@@ -83,20 +91,52 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
 
+?>
+<aside class="gh-shop-sidebar">
 
-?> 
 
-<div class="gh-shop-toolbar">
-		<div class="gh-shop-result-box">
-			<?php woocommerce_result_count(); ?>
-		</div>
+          <div class="gh-sidebar-block">
+            <h3 class="gh-sidebar-title">Search</h3>
+            <form class="gh-search-form">
+              <input type="search" placeholder="Search products...">
+              <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
 
-		<div class="gh-shop-ordering">
-			<?php woocommerce_catalog_ordering(); ?>
-		</div>
-	</div>
+          <div class="gh-sidebar-block">
+            <h3 class="gh-sidebar-title">Shop by Category</h3>
+            <ul class="gh-shop-category-list">
+              <li><a href="#">Plants <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Tools <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Fertilizer <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="#">Seeds <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="gh-sidebar-block">
+            <div class="gh-price-heading">
+              <h3 class="gh-sidebar-title">Price</h3>
+              <span><i class="fa-solid fa-cart-shopping"></i> Cart</span>
+            </div>
+
+            <div class="gh-range-line">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="gh-price-values">
+              <span>$19.99</span>
+              <span>-</span>
+              <span>$29.99</span>
+            </div>
+          </div>
+
+        </aside>
 
 <?php
+
 
 	woocommerce_product_loop_start();
 
@@ -131,7 +171,11 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_no_products_found' );
 }
+?>
 
+
+
+<?php
 /**
  * Hook: woocommerce_after_main_content.
  *

@@ -24,7 +24,7 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<article <?php wc_product_class( 'gh-product-card', $product ); ?>>
+<article <?php wc_product_class( 'gh-product-items ', $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
