@@ -32,10 +32,21 @@ do_action('woocommerce_before_main_content' );
 <header class="gh-shop-header">
 	<h1 class="gh-shop-title">Our Shop</h1>
 
-	
+<div class="gh-shop-result-box">
+			<?php woocommerce_result_count(); ?>
+	</div>
+
+
+   
+		<div class="gh-shop-ordering">
+			<?php woocommerce_catalog_ordering(); ?>
+		</div>	
+		
 </header>
 
 
+
+ 
 
 <?php    
 
@@ -62,21 +73,9 @@ if ( woocommerce_product_loop() ) {
 
 
 
-<div class="gh-shop-toolbar">
-	
-		<div class="gh-shop-result-box">
-			<?php woocommerce_result_count(); ?>
-		</div>
-
-		<div class="gh-shop-ordering">
-			<?php woocommerce_catalog_ordering(); ?>
-		</div>
-
-
-
-		
-	</div>
-
+  
+    
+  
 	
 <?php
 
@@ -92,55 +91,30 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_before_shop_loop' );
 
 ?>
-<aside class="gh-shop-sidebar">
 
-
-          <div class="gh-sidebar-block">
-            <h3 class="gh-sidebar-title">Search</h3>
-            <form class="gh-search-form">
-              <input type="search" placeholder="Search products...">
-              <button type="submit" aria-label="Search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-          </div>
-
-          <div class="gh-sidebar-block">
-            <h3 class="gh-sidebar-title">Shop by Category</h3>
-            <ul class="gh-shop-category-list">
-              <li><a href="#">Plants <i class="fa-solid fa-chevron-right"></i></a></li>
-              <li><a href="#">Tools <i class="fa-solid fa-chevron-right"></i></a></li>
-              <li><a href="#">Fertilizer <i class="fa-solid fa-chevron-right"></i></a></li>
-              <li><a href="#">Seeds <i class="fa-solid fa-chevron-right"></i></a></li>
-            </ul>
-          </div>
-
-          <div class="gh-sidebar-block">
-            <div class="gh-price-heading">
-              <h3 class="gh-sidebar-title">Price</h3>
-              <span><i class="fa-solid fa-cart-shopping"></i> Cart</span>
-            </div>
-
-            <div class="gh-range-line">
-              <span></span>
-              <span></span>
-            </div>
-
-            <div class="gh-price-values">
-              <span>$19.99</span>
-              <span>-</span>
-              <span>$29.99</span>
-            </div>
-          </div>
-
-        </aside>
 
 <?php
 
 
 	woocommerce_product_loop_start();
 
+?> 
 
+ <aside class="gh-shop-sidebar">
+
+          <?php dynamic_sidebar('product-sidebar'); ?>
+
+          <div class="gh-sidebar-block">
+           
+           
+          </div>
+
+       
+
+           
+
+        </aside>
+<?php
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
