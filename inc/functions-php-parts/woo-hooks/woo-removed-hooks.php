@@ -162,13 +162,13 @@ add_filter( 'woosc_button_position_single', '__return_false' );
 /**
  * Remove Sale Flash Badge.
  * From hook: woocommerce_before_single_product_summary.
- */
-remove_action(
-	'woocommerce_before_single_product_summary',
-	'woocommerce_show_product_sale_flash',
-	10
-);
-
+ 
+*remove_action(
+*	'woocommerce_before_single_product_summary',
+*	'woocommerce_show_product_sale_flash',
+*	10
+*);
+*/
 /**
  * Remove Product Gallery / Featured Image.
  * From hook: woocommerce_before_single_product_summary.
@@ -243,11 +243,11 @@ remove_action(
  * Remove Product Sharing Buttons.
  * From hook: woocommerce_single_product_summary.
  */
-remove_action(
-	'woocommerce_single_product_summary',
-	'woocommerce_template_single_sharing',
-	50
-);
+//remove_action(
+//	'woocommerce_single_product_summary',
+//	'woocommerce_template_single_sharing',
+//	50
+//);
 
 /**
  * Remove Product Data Tabs.
@@ -274,11 +274,11 @@ remove_action(
  * Remove Related Products.
  * From hook: woocommerce_after_single_product_summary.
  */
-remove_action(
-	'woocommerce_after_single_product_summary',
-	'woocommerce_output_related_products',
-	20
-);
+//remove_action(
+//	'woocommerce_after_single_product_summary',
+//	'woocommerce_output_related_products',
+//	20
+//);
 
 
 

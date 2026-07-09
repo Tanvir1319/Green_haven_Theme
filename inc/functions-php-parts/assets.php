@@ -112,7 +112,7 @@ function green_haven_theme_enqueue_assets() {
     wp_enqueue_script( 'green-haven-navigation-js',       get_template_directory_uri() . '/assets/js/navigation.js',             array( 'jquery' ), $version, true );
      wp_enqueue_script(
     'green-haven-review-carousel-js',
-    get_template_directory_uri() . '/assets/js/review-carousel.js',
+    get_template_directory_uri() . '/assets/js/woocomerce-single-page-plus-minus.js',
     array( 'jquery', 'green-haven-owl-carousel-js' ),
     $version,
     true

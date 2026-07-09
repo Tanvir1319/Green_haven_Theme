@@ -11,6 +11,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 1. Require the Theme Setup File
 require_once get_template_directory() . '/inc/functions-php-parts/theme-setup.php';
 
