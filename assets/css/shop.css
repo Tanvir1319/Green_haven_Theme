@@ -150,39 +150,30 @@ a {
   color: var(--gh-star);
 }
 
+.woocommerce .star-rating{
+  height: 21px;
+}
+
+.woocommerce-Price-amount.amount {
+  font-size: 126%;
+}
+
 .gh-product-price {
-  margin: 0 0 13px;
+  margin: 11px 0 13px;
+  
   font-size: 18px;
   line-height: 1.2;
   font-weight: 800;
   color: #111111;
 }
 
-.gh-cart-btn {
-  width: fit-content;
-  min-width: 132px;
-  height: 38px;
-  padding: 0 17px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  border-radius: 4px;
-  background: var(--gh-green);
-  color: var(--gh-white);
-  font-size: 14px;
-  font-weight: 600;
-}
 
-.gh-cart-btn:hover {
-  background: var(--gh-dark-green);
-  color: var(--gh-white);
-}
 
 .gh-shop-sidebar {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  padding: 7%;
 }
 
 .gh-sidebar-placeholder {
@@ -274,6 +265,52 @@ a {
 .gh-price-heading .gh-sidebar-title {
   margin: 0;
 }
+
+
+
+
+
+.woocommerce-product-categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.woocommerce-product-categories .cat-item {
+  list-style: none;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8ebe9;
+}
+
+.woocommerce-product-categories .cat-item > a {
+  color: #111111;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.woocommerce-product-categories .cat-item > .count {
+  margin-left: 12px;
+  color: #777777;
+  font-size: 13px;
+}
+
+.woocommerce-product-categories .cat-item > a:hover {
+  color: var(--gh-green);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .gh-price-heading span {
   display: inline-flex;
@@ -402,17 +439,143 @@ a {
 
 
 
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range{
+background-color: #2f7d20;
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle{
+  background-color: #2f7d20;
+  }
+
+
+  .woocommerce .widget_price_filter .price_slider_amount .button{
+    background-color: #2f7d20;
+    color: var(--gh-white)
+
+  }
+
+
+/* Wishlist & Compare Buttons */
+.gh-cart-btn,
+.woosw-btn,
+.woosc-btn {
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border: none;
+    border-radius: 6px;
+    background: var(--gh-green);
+    color: var(--gh-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 8px 0 0;
+}
+
+.gh-cart-btn {
+    width: auto;
+    min-width: 132px;
+    padding: 0 17px;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.woosw-btn,
+.woosc-btn {
+    width: 42px;
+    min-width: 42px;
+    padding: 0;
+    font-size: 18px;
+}
+
+.gh-cart-btn:hover,
+.woosw-btn:hover,
+.woosc-btn:hover {
+    background: var(--gh-dark-green);
+    color: var(--gh-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+.woosw-btn .woosw-btn-icon,
+.woosc-btn .woosc-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gh-white);
+    line-height: 1;
+}
+
+  .gh-shop-ordering .woocommerce-ordering {
+  margin: 12px;
+}
+
+
+/* Keep equal card height when rating is missing */
+.gh-product-body:not(:has(.gh-rating)) .gh-product-price {
+  margin-top: 39px;
+}
 
 
 
+/* Hide Add to Cart after product is added */
+.woocommerce .gh-cart-btn.added {
+  display: none !important;
+}
 
+/* View Cart — same size and design */
+.woocommerce a.added_to_cart {
+  width: auto;
+  min-width: 132px;
+  height: 38px;
+  padding: 0 17px;
+  margin: 0 8px 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: var(--gh-green);
+  color: var(--gh-white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.3s ease;
+  animation: ghViewCartAppear 0.35s ease;
+}
 
+/* Same cart icon */
+.woocommerce a.added_to_cart::before {
+  content: "\f07a";
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1;
+}
 
+/* Hover */
+.woocommerce a.added_to_cart:hover {
+  background: var(--gh-dark-green);
+  color: var(--gh-white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+}
 
+/* Small transformation animation */
+@keyframes ghViewCartAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
 
-
-
-
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
 

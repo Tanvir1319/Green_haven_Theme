@@ -108,14 +108,17 @@ a {
   line-height: 1.18;
   font-weight: 800;
   color: #111111;
+  margin-bottom: 30px;
 }
 
 .gh-product-category {
   margin: 0;
   font-size: 18px;
   line-height: 1.15;
+  margin-bottom: 17px;
   font-weight: 600;
   color: #111111;
+  font-size: 17px;
 }
 
 .gh-product-price {
@@ -124,6 +127,7 @@ a {
   line-height: 1;
   font-weight: 500;
   color: #111111;
+  margin-bottom: 24px;
 }
 
 .gh-stock-status {
