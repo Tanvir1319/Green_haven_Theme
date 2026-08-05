@@ -51,3 +51,92 @@
 	});
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jQuery(function ($) {
+  "use strict";
+
+  var ghCartUpdateTimer = null;
+  var ghCartUpdating = false;
+
+  function ghEnableUpdateButton() {
+    var $updateButton = $('button[name="update_cart"]');
+
+    if (!$updateButton.length) {
+      return $();
+    }
+
+    $updateButton.prop("disabled", false);
+    $updateButton.removeAttr("aria-disabled");
+
+    return $updateButton;
+  }
+
+  function ghUpdateCartTotals() {
+    if (ghCartUpdating) {
+      return;
+    }
+
+    var $updateButton = ghEnableUpdateButton();
+
+    if (!$updateButton.length) {
+      return;
+    }
+
+    ghCartUpdating = true;
+    $updateButton.trigger("click");
+
+    setTimeout(function () {
+      ghCartUpdating = false;
+    }, 1200);
+  }
+
+  function ghScheduleCartUpdate() {
+    window.clearTimeout(ghCartUpdateTimer);
+
+    ghCartUpdateTimer = window.setTimeout(function () {
+      ghUpdateCartTotals();
+    }, 350);
+  }
+
+  $(document.body).on("click", ".gh-qty-minus, .gh-qty-plus", function () {
+    window.setTimeout(function () {
+      ghScheduleCartUpdate();
+    }, 80);
+  });
+
+  $(document.body).on("change", ".woocommerce-cart-form input.qty", function () {
+    ghScheduleCartUpdate();
+  });
+
+  $(document.body).on("updated_wc_div", function () {
+    ghCartUpdating = false;
+  });
+});

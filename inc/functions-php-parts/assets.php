@@ -64,12 +64,71 @@ function green_haven_theme_enqueue_assets() {
     wp_enqueue_style( 'green-haven-home-style',        get_template_directory_uri() . '/assets/css/home-style.css',               array( 'green-haven-owl-carousel' ), $version, 'all' );
     wp_enqueue_style( 'green-haven-nav-footer',        get_template_directory_uri() . '/assets/css/navbar-footer.css',             array(), $version, 'all' );
     wp_enqueue_style( 'green-haven-contact',           get_template_directory_uri() . '/assets/css/contact.css',                   array(), $version, 'all' );
-    wp_enqueue_style( 'green-haven-shop',           get_template_directory_uri() . '/assets/css/shop.css',                   array(), $version, 'all' );
-    wp_enqueue_style( 'green-haven-cart',           get_template_directory_uri() . '/assets/css/cart.css',                   array(), $version, 'all' );
-    wp_enqueue_style( 'green-haven-checkout',           get_template_directory_uri() . '/assets/css/checkout.css',                   array(), $version, 'all' );
-    wp_enqueue_style( 'green-haven-single-product',           get_template_directory_uri() . '/assets/css/single-product.css',                   array(), $version, 'all' );
-    wp_enqueue_style( 'green-haven-wishlist',           get_template_directory_uri() . '/assets/css/wishlist.css',                   array(), $version, 'all' );
-   
+
+
+  /* Shop page */
+if (
+	function_exists( 'is_shop' ) &&
+	( is_shop() || is_product_category() || is_product_tag() )
+) {
+	wp_enqueue_style(
+		'green-haven-shop',
+		get_template_directory_uri() . '/assets/css/shop.css',
+		array( 'woocommerce-general' ),
+		filemtime( get_template_directory() . '/assets/css/shop.css' ),
+		'all'
+	);
+}
+
+/* Cart page */
+if ( function_exists( 'is_cart' ) && is_cart() ) {
+	wp_enqueue_style(
+		'green-haven-cart',
+		get_template_directory_uri() . '/assets/css/cart.css',
+		array( 'woocommerce-general' ),
+		filemtime( get_template_directory() . '/assets/css/cart.css' ),
+		'all'
+	);
+}
+
+/* Checkout page */
+if (
+	function_exists( 'is_checkout' ) &&
+	is_checkout() &&
+	! is_order_received_page()
+) {
+	wp_enqueue_style(
+		'green-haven-checkout',
+		get_template_directory_uri() . '/assets/css/checkout.css',
+		array( 'woocommerce-general' ),
+		filemtime( get_template_directory() . '/assets/css/checkout.css' ),
+		'all'
+	);
+}
+
+/* Single product page */
+if ( function_exists( 'is_product' ) && is_product() ) {
+	wp_enqueue_style(
+		'green-haven-single-product',
+		get_template_directory_uri() . '/assets/css/single-product.css',
+		array( 'woocommerce-general' ),
+		filemtime( get_template_directory() . '/assets/css/single-product.css' ),
+		'all'
+	);
+}
+
+/* Wishlist page */
+if ( is_page( 'wishlist' ) ) {
+	wp_enqueue_style(
+		'green-haven-wishlist',
+		get_template_directory_uri() . '/assets/css/wishlist.css',
+		array(),
+		filemtime( get_template_directory() . '/assets/css/wishlist.css' ),
+		'all'
+	);
+}
+
+
   
     wp_enqueue_style( 'green-haven-service',           get_template_directory_uri() . '/assets/css/service.css',                   array(), $version, 'all' );
     wp_enqueue_style( 'green-haven-service-load-more', get_template_directory_uri() . '/assets/css/service-page-load-more.css',    array(), $version, 'all' );
