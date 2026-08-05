@@ -924,3 +924,31 @@ body.woocommerce-cart .cross-sells h2 {
     line-height: 34px;
   }
 }
+
+
+
+
+body.woocommerce-checkout .wc-block-components-radio-control__option {
+  display: flex !important;
+  align-items: center !important;
+}
+
+body.woocommerce-checkout .wc-block-components-payment-method-label {
+margin-left: 5%;
+}
+
+
+/* Shipping option row */
+body.woocommerce-checkout .wc-block-components-shipping-rates-control .wc-block-components-radio-control__option {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Shipping label text, example: Free shipping */
+body.woocommerce-checkout .wc-block-components-shipping-rates-control .wc-block-components-radio-control__label {
+  margin-left: 5% !important;
+}
+
+wp-block-woocommerce-checkout-order-summary-block {
+  margin-right: -15%;
+}
