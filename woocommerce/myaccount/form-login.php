@@ -74,10 +74,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 	<span class="gh-register-link">
-		<?php esc_html_e( 'Want to Register?', 'green-haven-theme' ); ?>
-		<a href="#customer_register">
-			<?php esc_html_e( 'click here', 'green-haven-theme' ); ?>
-		</a>
+		
 	</span>
 	</div>
 
