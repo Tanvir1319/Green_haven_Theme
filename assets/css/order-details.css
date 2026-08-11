@@ -1,0 +1,635 @@
+:root {
+  --gh-primary: #65a30d;
+  --gh-light-green: #84cc16;
+  --gh-button: #65bd22;
+  --gh-button-hover: #54a91b;
+  --gh-dark-green: #073f32;
+  --gh-text: #101820;
+  --gh-muted: #6b7280;
+  --gh-border: #e5e7eb;
+  --gh-input-border: #d6dad8;
+  --gh-cream: #f5f1e8;
+  --gh-light-bg: #f7f5f0;
+  --gh-white: #ffffff;
+  --gh-error: #dc2626;
+  --gh-success: #16a34a;
+}
+
+/* =========================================================
+   ORDER RECEIVED PAGE BASE
+   ========================================================= */
+
+body.woocommerce-order-received {
+  margin: 0;
+  color: var(--gh-text);
+  background: linear-gradient(180deg, #f7f5f0 0%, var(--gh-white) 46%);
+  font-family: "Inter", sans-serif;
+}
+
+body.woocommerce-order-received *,
+body.woocommerce-order-received *::before,
+body.woocommerce-order-received *::after {
+  box-sizing: border-box;
+}
+
+body.woocommerce-order-received a {
+  color: var(--gh-primary);
+  text-decoration: none;
+}
+
+body.woocommerce-order-received a:hover {
+  color: var(--gh-dark-green);
+}
+
+body.woocommerce-order-received img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   PAGE STRUCTURE
+   ========================================================= */
+
+body.woocommerce-order-received .gh-standard-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.woocommerce-order-received .gh-standard-page-section {
+  width: 100%;
+  margin: 0;
+  padding: 42px 0 72px;
+  background: transparent;
+}
+
+body.woocommerce-order-received .gh-standard-page-section > .gh-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+body.woocommerce-order-received .gh-standard-page-entry,
+body.woocommerce-order-received .gh-page-content,
+body.woocommerce-order-received .entry-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.woocommerce-order-received .woocommerce {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   ORDER WRAPPER
+   ========================================================= */
+
+body.woocommerce-order-received .woocommerce-order {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.woocommerce-order-received .woocommerce-order > p {
+  margin: 0 0 24px;
+  padding: 16px 81px;
+  border: 1px solid var(--gh-border);
+  border-radius: 10px;
+  background: var(--gh-white);
+  color: var(--gh-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+body.woocommerce-order-received .woocommerce-thankyou-order-received {
+  position: relative;
+  margin: 0 0 24px;
+  padding: 28px 30px 28px 74px;
+  border: 1px solid var(--gh-border);
+  border-left: 5px solid var(--gh-success);
+  border-radius: 12px;
+  background: var(--gh-white);
+  color: var(--gh-dark-green);
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+body.woocommerce-order-received .woocommerce-thankyou-order-received::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gh-success);
+  transform: translateY(-50%);
+}
+
+body.woocommerce-order-received .woocommerce-thankyou-order-received::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 38px;
+  width: 8px;
+  height: 14px;
+  border-right: 2px solid var(--gh-white);
+  border-bottom: 2px solid var(--gh-white);
+  transform: translateY(-58%) rotate(45deg);
+}
+
+/* =========================================================
+   ORDER OVERVIEW
+   ========================================================= */
+
+body.woocommerce-order-received .woocommerce-order-overview {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+body.woocommerce-order-received .woocommerce-order-overview::before,
+body.woocommerce-order-received .woocommerce-order-overview::after {
+  display: none;
+  content: none;
+}
+
+body.woocommerce-order-received .woocommerce-order-overview li {
+  float: none;
+  width: auto;
+  margin: 0;
+  padding: 18px 16px;
+  border: 1px solid var(--gh-border);
+  border-radius: 10px;
+  background: var(--gh-white);
+  color: var(--gh-muted);
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+body.woocommerce-order-received .woocommerce-order-overview li strong {
+  display: block;
+  margin-top: 8px;
+  color: #111111;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+body.woocommerce-order-received .woocommerce-order-overview .woocommerce-Price-amount {
+  color: #111111;
+  font-weight: 800;
+}
+
+/* =========================================================
+   SECTION CARDS
+   ========================================================= */
+
+body.woocommerce-order-received .woocommerce-order-details,
+body.woocommerce-order-received .woocommerce-customer-details {
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 26px;
+  border: 1px solid var(--gh-border);
+  border-radius: 12px;
+  background: var(--gh-white);
+}
+
+body.woocommerce-order-received .woocommerce-customer-details {
+  margin-bottom: 0;
+}
+
+body.woocommerce-order-received .woocommerce-order-details__title,
+body.woocommerce-order-received .woocommerce-column__title {
+  margin: 0 0 22px;
+  color: #111111;
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+/* =========================================================
+   ORDER DETAILS TABLE
+   ========================================================= */
+
+body.woocommerce-order-received table.woocommerce-table--order-details,
+body.woocommerce-order-received table.shop_table.order_details {
+  width: 100%;
+  margin: 0;
+  border: 1px solid var(--gh-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--gh-white);
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details thead th,
+body.woocommerce-order-received table.shop_table.order_details thead th {
+  padding: 17px 18px;
+  border: 0;
+  border-bottom: 1px solid var(--gh-border);
+  background: var(--gh-light-bg);
+  color: #111111;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 800;
+  text-align: left;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details thead th.product-total,
+body.woocommerce-order-received table.shop_table.order_details thead th.product-total {
+  text-align: right;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details tbody td,
+body.woocommerce-order-received table.shop_table.order_details tbody td {
+  padding: 18px;
+  border: 0;
+  border-bottom: 1px solid var(--gh-border);
+  color: var(--gh-text);
+  font-size: 15px;
+  line-height: 1.45;
+  vertical-align: middle;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details tbody tr:last-child td,
+body.woocommerce-order-received table.shop_table.order_details tbody tr:last-child td {
+  border-bottom: 1px solid var(--gh-border);
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details .product-name,
+body.woocommerce-order-received table.shop_table.order_details .product-name {
+  text-align: left;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details .product-name a,
+body.woocommerce-order-received table.shop_table.order_details .product-name a {
+  color: #111111;
+  font-weight: 800;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details .product-name a:hover,
+body.woocommerce-order-received table.shop_table.order_details .product-name a:hover {
+  color: var(--gh-primary);
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details .product-total,
+body.woocommerce-order-received table.shop_table.order_details .product-total {
+  text-align: right;
+  white-space: nowrap;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details .product-quantity,
+body.woocommerce-order-received table.shop_table.order_details .product-quantity {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--gh-cream);
+  color: var(--gh-dark-green);
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details .woocommerce-Price-amount,
+body.woocommerce-order-received table.shop_table.order_details .woocommerce-Price-amount {
+  color: #111111;
+  font-weight: 800;
+}
+
+/* =========================================================
+   TABLE FOOTER TOTALS
+   ========================================================= */
+
+body.woocommerce-order-received table.woocommerce-table--order-details tfoot th,
+body.woocommerce-order-received table.woocommerce-table--order-details tfoot td,
+body.woocommerce-order-received table.shop_table.order_details tfoot th,
+body.woocommerce-order-received table.shop_table.order_details tfoot td {
+  padding: 15px 18px;
+  border: 0;
+  border-bottom: 1px solid var(--gh-border);
+  background: var(--gh-white);
+  color: var(--gh-text);
+  font-size: 15px;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details tfoot th,
+body.woocommerce-order-received table.shop_table.order_details tfoot th {
+  color: #111111;
+  font-weight: 800;
+  text-align: left;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details tfoot td,
+body.woocommerce-order-received table.shop_table.order_details tfoot td {
+  text-align: right;
+  font-weight: 700;
+}
+
+body.woocommerce-order-received table.woocommerce-table--order-details tfoot tr:last-child th,
+body.woocommerce-order-received table.woocommerce-table--order-details tfoot tr:last-child td,
+body.woocommerce-order-received table.shop_table.order_details tfoot tr:last-child th,
+body.woocommerce-order-received table.shop_table.order_details tfoot tr:last-child td {
+  border-bottom: 0;
+  color: #111111;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CUSTOMER DETAILS
+   ========================================================= */
+
+body.woocommerce-order-received .woocommerce-customer-details .woocommerce-columns,
+body.woocommerce-order-received .woocommerce-customer-details .col2-set {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+  margin: 0;
+}
+
+body.woocommerce-order-received .woocommerce-customer-details .woocommerce-columns::before,
+body.woocommerce-order-received .woocommerce-customer-details .woocommerce-columns::after,
+body.woocommerce-order-received .woocommerce-customer-details .col2-set::before,
+body.woocommerce-order-received .woocommerce-customer-details .col2-set::after {
+  display: none;
+  content: none;
+}
+
+body.woocommerce-order-received .woocommerce-customer-details .woocommerce-column,
+body.woocommerce-order-received .woocommerce-customer-details .col-1,
+body.woocommerce-order-received .woocommerce-customer-details .col-2 {
+  float: none;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body.woocommerce-order-received .woocommerce-customer-details .woocommerce-column {
+  padding: 20px;
+  border: 1px solid var(--gh-border);
+  border-radius: 10px;
+  background: var(--gh-light-bg);
+}
+
+body.woocommerce-order-received .woocommerce-column__title {
+  margin-bottom: 16px;
+  font-size: 21px;
+}
+
+body.woocommerce-order-received address {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--gh-text);
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+body.woocommerce-order-received .woocommerce-customer-details--email,
+body.woocommerce-order-received .woocommerce-customer-details--phone {
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--gh-border);
+  color: var(--gh-dark-green);
+  font-weight: 700;
+}
+
+body.woocommerce-order-received .woocommerce-customer-details--email::before,
+body.woocommerce-order-received .woocommerce-customer-details--phone::before {
+  display: none;
+}
+
+/* =========================================================
+   BUTTONS / LINKS
+   ========================================================= */
+
+body.woocommerce-order-received .button,
+body.woocommerce-order-received button.button,
+body.woocommerce-order-received input.button,
+body.woocommerce-order-received a.button {
+  min-height: 44px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--gh-button) !important;
+  color: var(--gh-white) !important;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+body.woocommerce-order-received .button:hover,
+body.woocommerce-order-received button.button:hover,
+body.woocommerce-order-received input.button:hover,
+body.woocommerce-order-received a.button:hover {
+  background: var(--gh-button-hover) !important;
+  color: var(--gh-white) !important;
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  body.woocommerce-order-received .gh-standard-page-section {
+    padding: 34px 0 60px;
+  }
+
+  body.woocommerce-order-received .gh-standard-page-section > .gh-container {
+    max-width: 920px;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.woocommerce-order-received .woocommerce-order-overview li:last-child {
+    grid-column: 1 / -1;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-details,
+  body.woocommerce-order-received .woocommerce-customer-details {
+    padding: 24px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  body.woocommerce-order-received .gh-standard-page-section {
+    padding: 26px 0 46px;
+  }
+
+  body.woocommerce-order-received .gh-standard-page-section > .gh-container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  body.woocommerce-order-received .woocommerce-thankyou-order-received {
+    margin-bottom: 20px;
+    padding: 22px 20px 22px 62px;
+    font-size: 21px;
+  }
+
+  body.woocommerce-order-received .woocommerce-thankyou-order-received::before {
+    left: 22px;
+    width: 26px;
+    height: 26px;
+  }
+
+  body.woocommerce-order-received .woocommerce-thankyou-order-received::after {
+    left: 31px;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-overview {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-overview li:last-child {
+    grid-column: auto;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-details,
+  body.woocommerce-order-received .woocommerce-customer-details {
+    margin-bottom: 22px;
+    padding: 20px 18px;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-details__title,
+  body.woocommerce-order-received .woocommerce-column__title {
+    font-size: 21px;
+  }
+
+  body.woocommerce-order-received table.woocommerce-table--order-details,
+  body.woocommerce-order-received table.shop_table.order_details {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  body.woocommerce-order-received table.woocommerce-table--order-details thead,
+  body.woocommerce-order-received table.woocommerce-table--order-details tbody,
+  body.woocommerce-order-received table.woocommerce-table--order-details tfoot,
+  body.woocommerce-order-received table.shop_table.order_details thead,
+  body.woocommerce-order-received table.shop_table.order_details tbody,
+  body.woocommerce-order-received table.shop_table.order_details tfoot {
+    display: table;
+    width: 100%;
+    min-width: 560px;
+  }
+
+  body.woocommerce-order-received .woocommerce-customer-details .woocommerce-columns,
+  body.woocommerce-order-received .woocommerce-customer-details .col2-set {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  body.woocommerce-order-received .woocommerce-customer-details .woocommerce-column {
+    padding: 18px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+  body.woocommerce-order-received .gh-standard-page-section {
+    padding: 22px 0 40px;
+  }
+
+  body.woocommerce-order-received .gh-standard-page-section > .gh-container {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  body.woocommerce-order-received .woocommerce-thankyou-order-received {
+    padding: 20px 16px 20px 56px;
+    font-size: 19px;
+  }
+
+  body.woocommerce-order-received .woocommerce-thankyou-order-received::before {
+    left: 18px;
+    width: 24px;
+    height: 24px;
+  }
+
+  body.woocommerce-order-received .woocommerce-thankyou-order-received::after {
+    left: 26px;
+    width: 7px;
+    height: 12px;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-overview li {
+    padding: 16px 14px;
+  }
+
+  body.woocommerce-order-received .woocommerce-order-details,
+  body.woocommerce-order-received .woocommerce-customer-details {
+    padding: 18px 14px;
+  }
+
+  body.woocommerce-order-received table.woocommerce-table--order-details thead th,
+  body.woocommerce-order-received table.shop_table.order_details thead th,
+  body.woocommerce-order-received table.woocommerce-table--order-details tbody td,
+  body.woocommerce-order-received table.shop_table.order_details tbody td,
+  body.woocommerce-order-received table.woocommerce-table--order-details tfoot th,
+  body.woocommerce-order-received table.woocommerce-table--order-details tfoot td,
+  body.woocommerce-order-received table.shop_table.order_details tfoot th,
+  body.woocommerce-order-received table.shop_table.order_details tfoot td {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  body.woocommerce-order-received address {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+

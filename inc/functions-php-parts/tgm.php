@@ -32,6 +32,26 @@ function green_haven_register_required_plugins() {
             'required' => true,
         ),
 
+          // Required Plugin
+         array(
+            'name'     => 'WooCommerce',
+            'slug'     => 'woocommerce',
+            'required' => false,
+        ),
+
+          // Required Plugin
+         array(
+            'name'     => 'WPC Smart Compare for WooCommerce',
+            'slug'     => 'woo-smart-compare',
+            'required' => false,
+        ),
+
+          // Recommended Plugin
+         array(
+            'name'     => 'WPC Smart Wishlist for WooCommerce',
+            'slug'     => 'woo-smart-wishlist',
+            'required' => false,
+        ),
     
         
     );
